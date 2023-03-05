@@ -881,6 +881,9 @@ MonoBehaviour:
     into focus dry roots wrap round sap covered arms you tear them off wiping the
     dirt from \r\nyourself. You grab a lose branch and use it to stand and prop yourself.
     In front of you the earth \r\nfades into a dense white fog."
+  actions:
+  - {fileID: 11400000, guid: 496a01f042c0c9b4aa700376722f5c59, type: 2}
+  - {fileID: 11400000, guid: 94279fdbcdaf36a4d82966646f480351, type: 2}
 --- !u!4 &872636614
 Transform:
   m_ObjectHideFlags: 0

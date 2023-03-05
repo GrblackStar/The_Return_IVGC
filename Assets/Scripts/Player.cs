@@ -8,15 +8,29 @@ public class Player : MonoBehaviour
     public Location currentLocation;
 
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+
     }
+
+
+    public bool ChangeLocation(GameController gameController, string  connectionNoun)
+    {
+        Connection connection = currentLocation.GetConnection(connectionNoun);
+        if (connection != null)
+        {
+            if (connection.connectionEnabled)
+            {
+                currentLocation = connection.location;
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

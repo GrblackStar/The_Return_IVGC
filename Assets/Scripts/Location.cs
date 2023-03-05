@@ -17,13 +17,11 @@ public class Location : MonoBehaviour
     public Connection[] connections;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -42,6 +40,18 @@ public class Location : MonoBehaviour
             }
         }
         return result;
+    }
+
+    public Connection GetConnection(string connectionNoun)
+    {
+        foreach (Connection c in connections)
+        {
+            if (c.connectionName.ToLower() == connectionNoun.ToLower())
+            {
+                return c;
+            }
+        }
+        return null;
     }
 
 
