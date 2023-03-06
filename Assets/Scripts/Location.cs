@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,9 @@ public class Location : MonoBehaviour
     [TextArea]
     public string description;
     public Connection[] connections;
+
+    // the number of items can change, while the game is running  -->> List
+    public List<Item> items = new List<Item>();
 
 
     void Start()
@@ -53,6 +57,44 @@ public class Location : MonoBehaviour
         }
         return null;
     }
+
+    // display the list of items:
+    public string GetItemsText()
+    {
+        if (items.Count == 0) 
+            return string.Empty;
+        string result = "You see ";
+
+        bool first = true;
+        foreach (Item item in items)
+        {
+            if (item.itemEnabled)
+            {
+                if (!first)
+                    result += " and ";
+                result += item.descriprion;
+                first = false;
+            }
+            
+        }
+        result += "\n";
+        return result;
+    }
+
+    internal bool HasItem(Item itemToCheck)
+    {
+        foreach (Item item in items)
+        {
+            if (item == itemToCheck  &&  item.itemEnabled)
+            {
+                return true;
+            }
+        }
+
+        return false;
+
+    }
+
 
 
 }

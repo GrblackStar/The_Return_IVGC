@@ -42,12 +42,24 @@ public class GameController : MonoBehaviour
 
 
     //displaying the location that the user is currently at
-    public void DisplayLocation()
+    // (bool additive = false)  ---->>>> the default paramethervalue, so if you don't pass an addative,
+    // when calling the function, it will automatically be set to false
+    public void DisplayLocation(bool additive = false)
     {
         string description = player.currentLocation.description + "\n";
         // return a list of connections
         description += player.currentLocation.GetConnectionsText();
-        currentText.text = description;
+        description += player.currentLocation.GetItemsText();
+        if (additive)
+        {
+            currentText.text = currentText.text + "\n" + description;
+        }
+        else
+        {
+            // we just replace the text with this description
+            currentText.text = description;
+        }
+        
 
     }
 

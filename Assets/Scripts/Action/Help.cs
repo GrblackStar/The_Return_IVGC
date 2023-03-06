@@ -7,7 +7,7 @@ using UnityEngine;
 public class Help : Action
 {
     // OVERRIDE  --->>> overriding the method in the base class
-    public override void RespondToInput(GameController controller, string verb)
+    public override void RespondToInput(GameController controller, string noun)
     {
         controller.currentText.text = "Type a Verb followed by a noun(e.g. \"go north\")";
         controller.currentText.text += "\nAllowed verbs:\nGo, Examine, Get, Give, Use, Inventory, TalkTo, Say, Help";

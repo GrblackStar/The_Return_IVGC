@@ -18,7 +18,7 @@ public abstract class Action : ScriptableObject
 
     // responds to the users commands:
     // abstract -->> any child that inherits from Action class, MUST implement this function
-    public abstract void RespondToInput(GameController controller, string verb);
+    public abstract void RespondToInput(GameController controller, string noun);
 
 
 }
