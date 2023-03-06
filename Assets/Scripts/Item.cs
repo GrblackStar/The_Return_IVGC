@@ -5,6 +5,7 @@ using UnityEngine;
 // the items are going to exist in the world -->> MonoBehaviour
 public class Item : MonoBehaviour
 {
+    #region Fields
     public string itemName;
     [TextArea]
     public string descriprion;
@@ -18,16 +19,23 @@ public class Item : MonoBehaviour
 
     public Item targetItem = null;
 
+    public bool playerCanTalkTo = false;
+    public bool playerCanGiveTo = false;
+
+    #endregion
 
 
     // responsible for the actual interactions:
     // bool -->> to signify whether the interaction happened
-    public bool InteractWith(GameController controller, string actionKeyword)
+    public bool InteractWith(GameController controller, string actionKeyword, string noun = "")
     {
         foreach (Interaction interaction in interactions)
         {
             if (interaction.action.keyword == actionKeyword)
             {
+                if (noun != null && noun.ToLower() != interaction.textToMatch.ToLower())
+                    continue;
+
                 foreach (Item disableItem in interaction.itemsToDisable)
                 {
                     disableItem.itemEnabled = false;
@@ -47,6 +55,11 @@ public class Item : MonoBehaviour
                     enableConnection.connectionEnabled = true;
                 }
 
+
+                if (interaction.teleportLocation != null)
+                {
+                    controller.player.Teleport(controller, interaction.teleportLocation);
+                }
 
                 controller.currentText.text = interaction.response;
                 controller.DisplayLocation(true);

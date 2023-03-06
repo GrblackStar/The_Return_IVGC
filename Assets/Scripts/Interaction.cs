@@ -20,7 +20,9 @@ public class Interaction
     public List<Connection> connectionsToDisable = new List<Connection>();
     public List<Connection> connectionsToEnable = new List<Connection>();
 
+    public string textToMatch;
 
+    public Location teleportLocation = null;
 
 
 }

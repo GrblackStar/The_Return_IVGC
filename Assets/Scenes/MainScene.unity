@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: North
-  description: There is a beach to the north.
+  description: There is a beach to the <b>north</b>.
   location: {fileID: 953385981}
   connectionEnabled: 1
 --- !u!1 &27068541
@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: well
-  descriprion: An old stone well
+  descriprion: an old stone <b>well</b>
   playerCanTake: 0
   itemEnabled: 1
   interactions:
@@ -235,7 +235,11 @@ MonoBehaviour:
     - {fileID: 356952288}
     - {fileID: 1693041379}
     connectionsToEnable: []
+    textToMatch: 
+    teleportLocation: {fileID: 0}
   targetItem: {fileID: 0}
+  playerCanTalkTo: 0
+  playerCanGiveTo: 0
 --- !u!1 &108743848
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,7 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: North
-  description: To the north a carved wooden door.
+  description: To the <b>north</b> a carved wooden door.
   location: {fileID: 1910149687}
   connectionEnabled: 1
 --- !u!4 &108743850
@@ -488,7 +492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: West
-  description: To the west is the island
+  description: To the <b>west</b> is the island
   location: {fileID: 123007735}
   connectionEnabled: 1
 --- !u!1 &197790235
@@ -601,7 +605,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1509861275}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &308381309
 MonoBehaviour:
@@ -616,11 +620,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: goldencoins
-  descriprion: Gold coins
+  descriprion: <b>goldencoins</b>
   playerCanTake: 1
   itemEnabled: 0
   interactions: []
   targetItem: {fileID: 0}
+  playerCanTalkTo: 0
+  playerCanGiveTo: 0
 --- !u!1 &356952287
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,7 +657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: East
-  description: There is an antechamber to the east
+  description: There is an antechamber to the <b>east</b>
   location: {fileID: 123756425}
   connectionEnabled: 1
 --- !u!4 &356952289
@@ -714,7 +720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: South
-  description: To the south you see a large tree
+  description: To the <b>south</b> you see a large tree
   location: {fileID: 498983237}
   connectionEnabled: 1
 --- !u!1 &405014951
@@ -968,7 +974,7 @@ GameObject:
   - component: {fileID: 533792675}
   - component: {fileID: 533792676}
   m_Layer: 0
-  m_Name: Ferryman
+  m_Name: Ferryman1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1002,11 +1008,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: ferryman
-  descriprion: A Robed Ferryman
+  descriprion: a robed <b>ferryman</b>
   playerCanTake: 0
   itemEnabled: 1
-  interactions: []
+  interactions:
+  - action: {fileID: 11400000, guid: 15fa2efd57fe83340998bd3a304a320a, type: 2}
+    response: Who is it that seeks passage?
+    itemsToDisable: []
+    itemsToEnable: []
+    connectionsToDisable: []
+    connectionsToEnable: []
+    textToMatch: 
+    teleportLocation: {fileID: 0}
+  - action: {fileID: 11400000, guid: cfb55f18aac7b8042848ef413313f63f, type: 2}
+    response: Where do you seek?
+    itemsToDisable:
+    - {fileID: 533792676}
+    itemsToEnable:
+    - {fileID: 1027123221}
+    connectionsToDisable: []
+    connectionsToEnable: []
+    textToMatch: merlin
+    teleportLocation: {fileID: 0}
   targetItem: {fileID: 0}
+  playerCanTalkTo: 1
+  playerCanGiveTo: 0
 --- !u!1 &540560226
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,7 +1063,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1509861275}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &540560228
 MonoBehaviour:
@@ -1052,11 +1078,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: surpent
-  descriprion: a giant snake like serpent
+  descriprion: a giant snake like <b>serpent</b>
   playerCanTake: 0
   itemEnabled: 0
   interactions: []
   targetItem: {fileID: 0}
+  playerCanTalkTo: 0
+  playerCanGiveTo: 0
 --- !u!1 &593323660
 GameObject:
   m_ObjectHideFlags: 0
@@ -1102,7 +1130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: North
-  description: To the north is the rest of the Island
+  description: To the <b>north</b> is the rest of the Island
   location: {fileID: 123007735}
   connectionEnabled: 1
 --- !u!1 &600322093
@@ -1177,7 +1205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: South
-  description: To the south the steps snake down the cliff face to the shore.
+  description: To the <b>south</b> the steps snake down the cliff face to the shore.
   location: {fileID: 405014953}
   connectionEnabled: 1
 --- !u!4 &673298570
@@ -1240,7 +1268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: West
-  description: To the west lies a shore.
+  description: To the <b>west</b> lies a shore.
   location: {fileID: 129310575}
   connectionEnabled: 1
 --- !u!1 &754874231
@@ -1471,11 +1499,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: statue
-  descriprion: a stone statue, smashed at the waist.
+  descriprion: a stone <b>statue</b>, smashed at the waist.
   playerCanTake: 0
   itemEnabled: 1
   interactions: []
   targetItem: {fileID: 0}
+  playerCanTalkTo: 0
+  playerCanGiveTo: 0
 --- !u!1 &868197432
 GameObject:
   m_ObjectHideFlags: 0
@@ -1506,7 +1536,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1509861275}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &868197434
 MonoBehaviour:
@@ -1521,11 +1551,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: head
-  descriprion: A smashed statue head
+  descriprion: a smashed statue <b>head</b>
   playerCanTake: 0
   itemEnabled: 1
-  interactions: []
+  interactions:
+  - action: {fileID: 11400000, guid: b44a7666222923247a0eed883539636d, type: 2}
+    response: "You pick up the stone head in both hands. You turn the face towards
+      you, it looks familiar. \r\nYou mouth the word, \u201CMerlin\u201D"
+    itemsToDisable: []
+    itemsToEnable: []
+    connectionsToDisable: []
+    connectionsToEnable: []
+    textToMatch: 
+    teleportLocation: {fileID: 0}
   targetItem: {fileID: 0}
+  playerCanTalkTo: 0
+  playerCanGiveTo: 0
 --- !u!1 &872636612
 GameObject:
   m_ObjectHideFlags: 0
@@ -1576,6 +1617,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b3bda601be6fa9646bf226ea3f27ff41, type: 2}
   - {fileID: 11400000, guid: b44a7666222923247a0eed883539636d, type: 2}
   - {fileID: 11400000, guid: ace6b4c9005a16844b358ac8b2543b2e, type: 2}
+  - {fileID: 11400000, guid: 15fa2efd57fe83340998bd3a304a320a, type: 2}
+  - {fileID: 11400000, guid: cfb55f18aac7b8042848ef413313f63f, type: 2}
+  - {fileID: 11400000, guid: e432f88575d8fbd408b8855468919285, type: 2}
 --- !u!4 &872636614
 Transform:
   m_ObjectHideFlags: 0
@@ -1628,8 +1672,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 8.2638}
-  m_SizeDelta: {x: -62.4216, y: -98.376}
+  m_AnchoredPosition: {x: 0, y: 2.726}
+  m_SizeDelta: {x: -62.4216, y: -87.3004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &922273390
 MonoBehaviour:
@@ -1761,8 +1805,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.00000000211, y: 29}
-  m_SizeDelta: {x: 716.2, y: 37.520996}
+  m_AnchoredPosition: {x: -0.00000000211, y: 24.8466}
+  m_SizeDelta: {x: 716.2, y: 29.2142}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &976059538
 MonoBehaviour:
@@ -1912,7 +1956,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1509861275}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &989931518
 MonoBehaviour:
@@ -1927,11 +1971,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: tapestry
-  descriprion: A thread worn tapestry
+  descriprion: a thread worn <b>tapestry</b>
   playerCanTake: 0
   itemEnabled: 1
-  interactions: []
+  interactions:
+  - action: {fileID: 11400000, guid: b44a7666222923247a0eed883539636d, type: 2}
+    response: "You wipe away years of dust and cobwebs to reveal the tapestry is
+      a moth-eaten depiction\rof ancient Albion. You mouth the word \u201CAlbion\u201D"
+    itemsToDisable: []
+    itemsToEnable: []
+    connectionsToDisable: []
+    connectionsToEnable: []
+    textToMatch: 
+    teleportLocation: {fileID: 0}
   targetItem: {fileID: 0}
+  playerCanTalkTo: 0
+  playerCanGiveTo: 0
 --- !u!1 &994080075
 GameObject:
   m_ObjectHideFlags: 0
@@ -1968,7 +2023,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000015258789}
+  m_AnchoredPosition: {x: 0, y: 6.9223}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &994080077
@@ -2054,6 +2109,76 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
+--- !u!1 &1027123219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1027123220}
+  - component: {fileID: 1027123221}
+  m_Layer: 0
+  m_Name: Ferryman2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1027123220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027123219}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1509861275}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1027123221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027123219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 541b99519eebc834c950751d406dcf99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: ferryman
+  descriprion: a robed <b>ferryman</b>
+  playerCanTake: 0
+  itemEnabled: 0
+  interactions:
+  - action: {fileID: 11400000, guid: 15fa2efd57fe83340998bd3a304a320a, type: 2}
+    response: Where do you seek?
+    itemsToDisable: []
+    itemsToEnable: []
+    connectionsToDisable: []
+    connectionsToEnable: []
+    textToMatch: 
+    teleportLocation: {fileID: 0}
+  - action: {fileID: 11400000, guid: cfb55f18aac7b8042848ef413313f63f, type: 2}
+    response: What will you pay?
+    itemsToDisable:
+    - {fileID: 1027123221}
+    itemsToEnable:
+    - {fileID: 1175073502}
+    connectionsToDisable: []
+    connectionsToEnable: []
+    textToMatch: albion
+    teleportLocation: {fileID: 0}
+  targetItem: {fileID: 0}
+  playerCanTalkTo: 1
+  playerCanGiveTo: 0
 --- !u!1 &1063540493
 GameObject:
   m_ObjectHideFlags: 0
@@ -2135,8 +2260,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: North
-  description: Peering north across the sea to a dark shape hovers on the edge of
-    sight
+  description: Peering <b>north</b> across the sea to a dark shape hovers on the
+    edge of sight
   location: {fileID: 405014953}
   connectionEnabled: 1
 --- !u!4 &1109237043
@@ -2154,6 +2279,74 @@ Transform:
   m_Father: {fileID: 953385980}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1175073500
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1175073501}
+  - component: {fileID: 1175073502}
+  m_Layer: 0
+  m_Name: Ferryman3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1175073501
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175073500}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1509861275}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1175073502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175073500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 541b99519eebc834c950751d406dcf99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: ferryman
+  descriprion: a robed <b>ferryman</b>
+  playerCanTake: 0
+  itemEnabled: 0
+  interactions:
+  - action: {fileID: 11400000, guid: 15fa2efd57fe83340998bd3a304a320a, type: 2}
+    response: What will you pay?
+    itemsToDisable: []
+    itemsToEnable: []
+    connectionsToDisable: []
+    connectionsToEnable: []
+    textToMatch: 
+    teleportLocation: {fileID: 0}
+  - action: {fileID: 11400000, guid: e432f88575d8fbd408b8855468919285, type: 2}
+    response: 
+    itemsToDisable: []
+    itemsToEnable: []
+    connectionsToDisable: []
+    connectionsToEnable: []
+    textToMatch: goldencoins
+    teleportLocation: {fileID: 474048762}
+  targetItem: {fileID: 0}
+  playerCanTalkTo: 1
+  playerCanGiveTo: 1
 --- !u!1 &1199175067
 GameObject:
   m_ObjectHideFlags: 0
@@ -2231,8 +2424,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: North
-  description: Steps snake northward, high up the rock face leading to a dark cave
-    entrance
+  description: Steps snake <b>northward</b>, high up the rock face leading to a dark
+    cave entrance
   location: {fileID: 1716200032}
   connectionEnabled: 1
 --- !u!4 &1223292102
@@ -2280,7 +2473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: East
-  description: To the east is the island
+  description: To the <b>east</b> is the island
   location: {fileID: 123007735}
   connectionEnabled: 1
 --- !u!4 &1270241540
@@ -2554,6 +2747,8 @@ Transform:
   - {fileID: 856813942}
   - {fileID: 27068542}
   - {fileID: 533792675}
+  - {fileID: 1027123220}
+  - {fileID: 1175073501}
   - {fileID: 868197433}
   - {fileID: 989931517}
   - {fileID: 308381308}
@@ -2591,7 +2786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: West
-  description: West returns to the Chapel knave.
+  description: <b>West</b> returns to the Chapel knave.
   location: {fileID: 1716200032}
   connectionEnabled: 1
 --- !u!4 &1609817511
@@ -2639,7 +2834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: West
-  description: and an antechamber to the west.
+  description: and an antechamber to the <b>west</b>.
   location: {fileID: 1386579592}
   connectionEnabled: 1
 --- !u!4 &1693041380
@@ -2753,8 +2948,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0.00012207031, y: 96.936615}
-  m_SizeDelta: {x: -24.921, y: 182.7832}
+  m_AnchoredPosition: {x: 0.00012207031, y: 103.16}
+  m_SizeDelta: {x: -24.921, y: 195.24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1719720128
 MonoBehaviour:
@@ -2855,7 +3050,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: South
-  description: returns to the chapel
+  description: <b>South</b> returns to the chapel
   location: {fileID: 1716200032}
   connectionEnabled: 1
 --- !u!1 &1749662018
@@ -2888,7 +3083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: South
-  description: The wooden bridge leads south over the sea.
+  description: The wooden bridge leads <b>south</b> over the sea.
   location: {fileID: 953385981}
   connectionEnabled: 1
 --- !u!4 &1749662020
@@ -2951,15 +3146,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: staff
-  descriprion: a staff
+  descriprion: <b>a staff</b>
   playerCanTake: 1
   itemEnabled: 1
   interactions:
   - action: {fileID: 11400000, guid: ace6b4c9005a16844b358ac8b2543b2e, type: 2}
-    response: "Use- You lunge forward. The staff glows bursts with light, in one
-      arcing blow the serpents head is \rcleaved from its body. Coins erupt from
-      the severed neck, showering the room with gold. As the body\rslumps to the
-      floor the coins pump forth like blood."
+    response: "You lunge forward. The staff glows bursts with light, in one arcing
+      blow the serpents head is \rcleaved from its body. Coins erupt from the severed
+      neck, showering the room with gold. As the body\rslumps to the floor the coins
+      pump forth like blood."
     itemsToDisable:
     - {fileID: 540560228}
     itemsToEnable:
@@ -2970,7 +3165,11 @@ MonoBehaviour:
     - {fileID: 673298569}
     - {fileID: 356952288}
     - {fileID: 1693041379}
+    textToMatch: 
+    teleportLocation: {fileID: 0}
   targetItem: {fileID: 540560228}
+  playerCanTalkTo: 0
+  playerCanGiveTo: 0
 --- !u!1 &1816235324
 GameObject:
   m_ObjectHideFlags: 0
@@ -3001,7 +3200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: South
-  description: To the south is the island
+  description: To the <b>south</b> is the island
   location: {fileID: 123007735}
   connectionEnabled: 1
 --- !u!4 &1816235326
@@ -3070,7 +3269,10 @@ MonoBehaviour:
     boat, it rocks in the gathering wind ringing the\r arrival bell."
   connections:
   - {fileID: 1737043836}
-  items: []
+  items:
+  - {fileID: 533792676}
+  - {fileID: 1027123221}
+  - {fileID: 1175073502}
 --- !u!1 &2067095938
 GameObject:
   m_ObjectHideFlags: 0
@@ -3116,7 +3318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: East
-  description: East returns to the Chapel knave.
+  description: <b>East</b> returns to the Chapel knave.
   location: {fileID: 1716200032}
   connectionEnabled: 1
 --- !u!1 &2088114218
@@ -3232,11 +3434,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: tree
-  descriprion: A large tree
+  descriprion: a large <b>tree</b>
   playerCanTake: 0
   itemEnabled: 1
   interactions: []
   targetItem: {fileID: 0}
+  playerCanTalkTo: 0
+  playerCanGiveTo: 0
 --- !u!1 &2113246712
 GameObject:
   m_ObjectHideFlags: 0
@@ -3282,6 +3486,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: East
-  description: To the east lies a shore
+  description: To the <b>east</b> lies a shore
   location: {fileID: 1063540495}
   connectionEnabled: 1

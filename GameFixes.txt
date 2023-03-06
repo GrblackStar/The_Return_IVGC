@@ -1,0 +1,13 @@
+fixes:
+Every concat, do with stringBuilder
+
+Location: 		GetConnectionsText 
+			-> StringBuilder, no concat;     
+			-> string result = string.Empty;
+
+GameController:		Start
+			-> textEntryField.ActivateInputField();  when mouse buton is pressed
+			TextEntered
+			-> textEntryField.text = string.Empty;
+
+
