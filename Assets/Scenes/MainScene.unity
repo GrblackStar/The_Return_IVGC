@@ -240,6 +240,69 @@ MonoBehaviour:
   targetItem: {fileID: 0}
   playerCanTalkTo: 0
   playerCanGiveTo: 0
+  playerCanRead: 0
+--- !u!1 &84951922
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 84951923}
+  - component: {fileID: 84951924}
+  m_Layer: 0
+  m_Name: Plaque
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &84951923
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84951922}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1509861275}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &84951924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84951922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 541b99519eebc834c950751d406dcf99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: plaque
+  descriprion: a <b>plaque</b> embedded in the floor, it has somehting written on
+    it
+  playerCanTake: 0
+  itemEnabled: 1
+  interactions:
+  - action: {fileID: 11400000, guid: 93cf79e1ae01b864e96450f4882a98fc, type: 2}
+    response: The adventurer, Hristiana Hristova has been known to pass through here
+    itemsToDisable: []
+    itemsToEnable: []
+    connectionsToDisable: []
+    connectionsToEnable: []
+    textToMatch: 
+    teleportLocation: {fileID: 0}
+  targetItem: {fileID: 0}
+  playerCanTalkTo: 0
+  playerCanGiveTo: 0
+  playerCanRead: 1
 --- !u!1 &108743848
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,7 +406,8 @@ MonoBehaviour:
   - {fileID: 395883500}
   - {fileID: 2113246714}
   - {fileID: 712927027}
-  items: []
+  items:
+  - {fileID: 84951924}
 --- !u!1 &123756423
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,6 +691,7 @@ MonoBehaviour:
   targetItem: {fileID: 0}
   playerCanTalkTo: 0
   playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &356952287
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,6 +1098,7 @@ MonoBehaviour:
   targetItem: {fileID: 0}
   playerCanTalkTo: 1
   playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &540560226
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,6 +1151,7 @@ MonoBehaviour:
   targetItem: {fileID: 0}
   playerCanTalkTo: 0
   playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &593323660
 GameObject:
   m_ObjectHideFlags: 0
@@ -1506,6 +1573,7 @@ MonoBehaviour:
   targetItem: {fileID: 0}
   playerCanTalkTo: 0
   playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &868197432
 GameObject:
   m_ObjectHideFlags: 0
@@ -1567,6 +1635,7 @@ MonoBehaviour:
   targetItem: {fileID: 0}
   playerCanTalkTo: 0
   playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &872636612
 GameObject:
   m_ObjectHideFlags: 0
@@ -1620,6 +1689,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 15fa2efd57fe83340998bd3a304a320a, type: 2}
   - {fileID: 11400000, guid: cfb55f18aac7b8042848ef413313f63f, type: 2}
   - {fileID: 11400000, guid: e432f88575d8fbd408b8855468919285, type: 2}
+  - {fileID: 11400000, guid: 93cf79e1ae01b864e96450f4882a98fc, type: 2}
 --- !u!4 &872636614
 Transform:
   m_ObjectHideFlags: 0
@@ -1672,7 +1742,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 2.726}
+  m_AnchoredPosition: {x: 0, y: 2.7260132}
   m_SizeDelta: {x: -62.4216, y: -87.3004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &922273390
@@ -1987,6 +2057,7 @@ MonoBehaviour:
   targetItem: {fileID: 0}
   playerCanTalkTo: 0
   playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &994080075
 GameObject:
   m_ObjectHideFlags: 0
@@ -2179,6 +2250,7 @@ MonoBehaviour:
   targetItem: {fileID: 0}
   playerCanTalkTo: 1
   playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &1063540493
 GameObject:
   m_ObjectHideFlags: 0
@@ -2347,6 +2419,7 @@ MonoBehaviour:
   targetItem: {fileID: 0}
   playerCanTalkTo: 1
   playerCanGiveTo: 1
+  playerCanRead: 0
 --- !u!1 &1199175067
 GameObject:
   m_ObjectHideFlags: 0
@@ -2753,6 +2826,7 @@ Transform:
   - {fileID: 989931517}
   - {fileID: 308381308}
   - {fileID: 540560227}
+  - {fileID: 84951923}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3170,6 +3244,7 @@ MonoBehaviour:
   targetItem: {fileID: 540560228}
   playerCanTalkTo: 0
   playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &1816235324
 GameObject:
   m_ObjectHideFlags: 0
@@ -3441,6 +3516,7 @@ MonoBehaviour:
   targetItem: {fileID: 0}
   playerCanTalkTo: 0
   playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &2113246712
 GameObject:
   m_ObjectHideFlags: 0

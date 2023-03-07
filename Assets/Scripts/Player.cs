@@ -99,5 +99,30 @@ public class Player : MonoBehaviour
         currentLocation = destination;
     }
 
+    internal bool CanReadItem(GameController controller, Item item)
+    {
+        
+       if (item.playerCanRead)
+        {
+            return true;
+        }
+        return false;
+        /*
+        if (item.targetItem == null)
+        {
+            return true;
+        }
+        if (HasItem(item.targetItem))
+        {
+            return true;
+        }
+        if (currentLocation.HasItem(item.targetItem))
+        {
+            return true;
+        }
+        return false;
+        */
+    }
+
     #endregion
 }

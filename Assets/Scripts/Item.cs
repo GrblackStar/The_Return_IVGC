@@ -22,6 +22,8 @@ public class Item : MonoBehaviour
     public bool playerCanTalkTo = false;
     public bool playerCanGiveTo = false;
 
+    public bool playerCanRead = false;
+
     #endregion
 
 
